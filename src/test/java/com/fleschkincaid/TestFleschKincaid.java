@@ -15,10 +15,18 @@ public class TestFleschKincaid {
     private FleschKincaid fleshKincaid = new FleschKincaid();
 
     @Test
-    public void basicTest() {
-        test("see spot run, spot's");
-        test("\"The Flesch–Kincaid\" (F–K) Reading grade level was developed under contract to the United States Navy in 1975 by J. Peter Kincaid and his team.");
+    public void control() {
+        //                                            Expected / Actual
+        test(read("control/cat_in_the_hat.txt"));       // 111 / 98.2
+        test(read("control/cnn_article.txt"));          // 52  / 32.2
+        test(read("control/gettysburg_address.txt"));   // 66  / 51.8
+        test(read("control/harry_potter.txt"));         // 64  / 51.8
+        test(read("control/state_of_the_union.txt"));   // 70  / 52.5
+        test(read("control/voter_preference.txt"));     // 28.7/ 13.6
+    }
 
+    @Test
+    public void misc() {
         test(read("childrens_story1.txt"));
         test(read("childrens_story2.txt"));
         test(read("childrens_story3.txt"));
