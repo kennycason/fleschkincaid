@@ -3,6 +3,7 @@ Flesch Kincaid Index
 
 http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
 
+```
 Reading file: childrens_story1.txt
 74.70063873987098
 Reading file: childrens_story2.txt
@@ -33,3 +34,4 @@ Reading file: kindergarten_essay2.txt
 81.70769230769233
 Reading file: kindergarten_essay3.txt
 69.47187500000003
+```
