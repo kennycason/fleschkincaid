@@ -17,12 +17,12 @@ public class TestFleschKincaid {
     @Test
     public void control() {
         //                                            Expected / Actual
-        test(read("control/cat_in_the_hat.txt"));       // 111 / 98.2
-        test(read("control/cnn_article.txt"));          // 52  / 32.2
-        test(read("control/gettysburg_address.txt"));   // 66  / 51.8
-        test(read("control/harry_potter.txt"));         // 64  / 51.8
-        test(read("control/state_of_the_union.txt"));   // 70  / 52.5
-        test(read("control/voter_preference.txt"));     // 28.7/ 13.6
+        test(read("control/cat_in_the_hat.txt"));       // 111 / 108
+        test(read("control/cnn_article.txt"));          // 52  / 44.9
+        test(read("control/gettysburg_address.txt"));   // 66  / 63
+        test(read("control/harry_potter.txt"));         // 64  / 59.3
+        test(read("control/state_of_the_union.txt"));   // 70  / 57.2
+        test(read("control/voter_preference.txt"));     // 28.7/ 26.9
     }
 
     @Test

@@ -7,50 +7,50 @@ Control Data:
 
 ```
 Reading file: control/cat_in_the_hat.txt
-98.16386363636364 (Actual 111)
+107.98837976539589 (Actual 111)
 Reading file: control/cnn_article.txt
-32.21423076923078 (Actual 52)
+107.98837976539589 (Actual 52)
 Reading file: control/gettysburg_address.txt
-51.10936690647485 (Actual 66)
+62.97771223021584 (Actual 66)
 Reading file: control/harry_potter.txt
-51.77083333333335 (Actual 64)
+59.290833333333346 (Actual 64)
 Reading file: control/state_of_the_union.txt
-52.477704081632695 (Actual 70)
+57.22566326530614 (Actual 70)
 Reading file: control/voter_preference.txt
-13.611352941176499 (Actual 28.7)
+26.881941176470626 (Actual 28.7)
 ```
 
 Misc. data samples:
 
 ```
 Reading file: childrens_story1.txt
-74.70063873987098
+90.34097487432476
 Reading file: childrens_story2.txt
-75.0362172297949
+91.72403884214481
 Reading file: childrens_story3.txt
-71.88130802528907
+90.77821524178391
 Reading file: lawyer1.txt
-5.829733082706795
+13.250785714285726
 Reading file: lawyer2.txt
-36.46202511098782
+45.1943225582686
 Reading file: lawyer3.txt
-25.512886102960824
+36.527610029341176
 Reading file: sample_textbook.txt
-24.75720300751882
+34.17133834586468
 Reading file: sample_essay1.txt
-41.765812502603865
+58.32419270507856
 Reading file: sample_essay2.txt
-57.60354362416111
+71.230389261745
 Reading file: sample_essay3.txt
-45.63230018491885
+62.60618553523733
 Reading file: sample_essay4.txt
-67.28908255537252
+76.48776459820613
 Reading file: 4th_grade_essay1.txt
-49.91645933014356
+66.83645933014357
 Reading file: kindergarten_essay1.txt
-74.75000000000003
+79.20263157894739
 Reading file: kindergarten_essay2.txt
-81.70769230769233
+89.51692307692309
 Reading file: kindergarten_essay3.txt
-69.47187500000003
+85.67187500000001
 ```

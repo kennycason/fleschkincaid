@@ -3,6 +3,7 @@ package com.fleschkincaid;
 import com.fleschkincaid.lexer.Sentence;
 import com.fleschkincaid.lexer.SentenceLexer;
 import com.fleschkincaid.lexer.SyllableLexer;
+import com.fleschkincaid.lexer.Word;
 import com.fleschkincaid.lexer.WordLexer;
 
 import java.util.Iterator;
@@ -65,10 +66,13 @@ public class FleschKincaid {
     private int countSyllables(List<Sentence> sentences) {
         int count = 0;
         for(Sentence sentence : sentences) {
-            count += syllableLexer.tokenize(sentence).size();
+            for(Word word : wordLexer.tokenize(sentence)) {
+                count += syllableLexer.countSyllables(word);
+            }
         }
 
         return count;
     }
+
 
 }
