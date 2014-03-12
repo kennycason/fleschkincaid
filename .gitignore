@@ -1,0 +1,14 @@
+*.class
+*.DS_store
+.classpath
+.project
+.metadata
+.settings
+.settings/*
+.idea
+bin
+/target
+*.log
+.idea/*
+*.iml
+*.patch
