@@ -67,7 +67,7 @@ public class FleschKincaid {
         int count = 0;
         for(Sentence sentence : sentences) {
             for(Word word : wordLexer.tokenize(sentence)) {
-                count += syllableLexer.countSyllables(word);
+                count += syllableLexer.count(word);
             }
         }
 
