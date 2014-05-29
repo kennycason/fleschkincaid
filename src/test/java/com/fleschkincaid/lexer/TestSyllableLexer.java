@@ -1,5 +1,7 @@
 package com.fleschkincaid.lexer;
 
+import com.fleschkincaid.lexer.syllable.SyllableLexer;
+import com.fleschkincaid.lexer.word.Word;
 import org.junit.Test;
 
 /**

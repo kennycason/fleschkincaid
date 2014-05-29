@@ -1,10 +1,11 @@
 package com.fleschkincaid;
 
-import com.fleschkincaid.lexer.Sentence;
-import com.fleschkincaid.lexer.SentenceLexer;
-import com.fleschkincaid.lexer.SyllableLexer;
-import com.fleschkincaid.lexer.Word;
-import com.fleschkincaid.lexer.WordLexer;
+import com.fleschkincaid.lexer.sentence.Sentence;
+import com.fleschkincaid.lexer.sentence.SentenceLexer;
+import com.fleschkincaid.lexer.sentence.SimpleSentenceLexer;
+import com.fleschkincaid.lexer.syllable.SyllableLexer;
+import com.fleschkincaid.lexer.word.Word;
+import com.fleschkincaid.lexer.word.WordLexer;
 
 import java.util.Iterator;
 import java.util.List;
@@ -16,14 +17,14 @@ public class FleschKincaid {
 
     private static final int MIN_ALLOWED_SENTENCE_LENGTH = 10;
 
-    private final SentenceLexer sentenceLexer;
+    private SentenceLexer sentenceLexer;
 
     private final SyllableLexer syllableLexer;
 
     private final WordLexer wordLexer;
 
     public FleschKincaid() {
-        sentenceLexer = new SentenceLexer();
+        sentenceLexer = new SimpleSentenceLexer();
         syllableLexer = new SyllableLexer();
         wordLexer = new WordLexer();
     }
@@ -74,5 +75,8 @@ public class FleschKincaid {
         return count;
     }
 
+    public void setSentenceLexer(SentenceLexer sentenceLexer) {
+        this.sentenceLexer = sentenceLexer;
+    }
 
 }

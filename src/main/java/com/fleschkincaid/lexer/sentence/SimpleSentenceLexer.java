@@ -1,4 +1,4 @@
-package com.fleschkincaid.lexer;
+package com.fleschkincaid.lexer.sentence;
 
 import java.text.BreakIterator;
 import java.util.LinkedList;
@@ -7,8 +7,10 @@ import java.util.Locale;
 
 /**
  * Created by kenny on 3/11/14.
+ *
+ * A naive version
  */
-public class SentenceLexer {
+public class SimpleSentenceLexer implements SentenceLexer {
 
     public List<Sentence> tokenize(String text) {
         List<Sentence> sentences = new LinkedList<>();

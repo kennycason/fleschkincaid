@@ -1,4 +1,4 @@
-package com.fleschkincaid.lexer;
+package com.fleschkincaid.lexer.syllable;
 
 /**
  * Created by kenny on 3/11/14.

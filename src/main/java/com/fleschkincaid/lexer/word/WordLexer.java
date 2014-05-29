@@ -1,4 +1,6 @@
-package com.fleschkincaid.lexer;
+package com.fleschkincaid.lexer.word;
+
+import com.fleschkincaid.lexer.sentence.Sentence;
 
 import java.util.LinkedList;
 import java.util.List;

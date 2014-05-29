@@ -1,4 +1,6 @@
-package com.fleschkincaid.lexer;
+package com.fleschkincaid.lexer.syllable;
+
+import com.fleschkincaid.lexer.word.Word;
 
 /**
  * Created by kenny on 3/11/14.
