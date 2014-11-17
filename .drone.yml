@@ -1,0 +1,6 @@
+image: bradrydzewski/node:0.10
+notify:
+  email:
+    on_success: never
+    recipients:
+      - kenny@datarank.com
