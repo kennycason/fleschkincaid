@@ -1,6 +1,15 @@
 Flesch Kincaid Index
 ======================
-[![Build Status](http://40.143.203.5:81/api/badge/github.com/kennycason/fleschkincaid/status.svg?branch=master)](http://40.143.203.5:81/github.com/kennycason/fleschkincaid)
+
+Available on Maven Central
+
+```xml
+<dependency>
+    <groupId>kenny.nlp</groupId>
+    <artifactId>fleschkincaid</artifactId>
+    <version>1.0</version>
+</dependency>
+```
 
 http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
 
