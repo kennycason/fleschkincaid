@@ -5,7 +5,7 @@ Available on Maven Central
 
 ```xml
 <dependency>
-    <groupId>kenny.nlp</groupId>
+    <groupId>com.kennycason</groupId>
     <artifactId>fleschkincaid</artifactId>
     <version>1.0</version>
 </dependency>
