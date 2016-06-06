@@ -4,34 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>kenny.nlp</groupId>
+    <groupId>com.kennycason</groupId>
     <artifactId>fleschkincaid</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>Flesch Kincaid - Readability Classifier</name>
     <description>This is a simple implementation of the Flesch-Kincaid readability tests in Java. From Wikipedia, The Flesch/Flesch–Kincaid readability tests are readability tests designed to indicate comprehension difficulty when reading a passage of contemporary academic English.</description>
-    <url>http://kennycason.com/posts/2014-05-20-fleschkincaid.html</url>
-
-    <developers>
-        <developer>
-            <name>Kenny Cason</name>
-            <email>kenneth.cason@gmail.com</email>
-        </developer>
-    </developers>
-
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <scm>
-        <url>http://svn.apache.org/viewcvs.cgi/maven</url>
-        <connection>http://svn.apache.org/viewcvs.cgi/maven</connection>
-    </scm>
+    <url>https://github.com/kennycason/fleschkincaid</url>
 
     <dependencies>
         <dependency>
@@ -46,6 +26,75 @@
         </dependency>
     </dependencies>
 
+    <prerequisites>
+        <maven>3.3.0</maven>
+    </prerequisites>
+
+    <developers>
+        <developer>
+            <id>kennycason</id>
+            <name>Kenny Cason</name>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <url>https://github.com/kennycason</url>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/kennycason/fleschkincaid/issues</url>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:kennycason/fleschkincaid.git</connection>
+        <developerConnection>scm:git:git@github.com:kennycason/fleschkincaid.git</developerConnection>
+        <url>https://github.com/kennycason/fleschkincaid</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
@@ -58,15 +107,44 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.2</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <repository>
-            <id>hosted-3rd-party-repository</id>
-            <name>hosted-3rd-party-repository</name>
-            <url>http://whirlpool.ttagg.com:8081/nexus/content/repositories/hosted-3rd-party-repository/</url>
-        </repository>
-    </distributionManagement>
 
 </project>

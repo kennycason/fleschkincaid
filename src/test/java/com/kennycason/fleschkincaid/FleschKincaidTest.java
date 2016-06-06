@@ -1,13 +1,13 @@
-package com.fleschkincaid;
+package com.kennycason.fleschkincaid;
 
-import com.fleschkincaid.io.FileReader;
-import com.fleschkincaid.lexer.sentence.StandfordNLPSentenceLexer;
+import com.kennycason.fleschkincaid.io.FileReader;
+import com.kennycason.fleschkincaid.lexer.sentence.StandfordNLPSentenceLexer;
 import org.junit.Test;
 
 /**
  * Created by kenny on 3/11/14.
  */
-public class TestFleschKincaid {
+public class FleschKincaidTest {
 
     @Test
     public void control() {
@@ -56,17 +56,17 @@ public class TestFleschKincaid {
         test("kennys_essay2.txt");
     }
 
-    private void test(String fileName) {
-        FleschKincaid fleshKincaid = new FleschKincaid();
-        FileReader fileReader = new FileReader();
+    private void test(final String fileName) {
+        final FleschKincaid fleshKincaid = new FleschKincaid();
+        final FileReader fileReader = new FileReader();
 
         System.out.println(fleshKincaid.calculate(fileReader.read(fileName)));
     }
 
-    private void testStandford(String fileName) {
-        FleschKincaid fleshKincaid = new FleschKincaid();
+    private void testStandford(final String fileName) {
+        final FleschKincaid fleshKincaid = new FleschKincaid();
         fleshKincaid.setSentenceLexer(new StandfordNLPSentenceLexer());
-        FileReader fileReader = new FileReader();
+        final FileReader fileReader = new FileReader();
 
         System.out.println(fleshKincaid.calculate(fileReader.read(fileName)));
     }

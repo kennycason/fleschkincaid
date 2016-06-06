@@ -1,4 +1,4 @@
-package com.fleschkincaid.lexer.word;
+package com.kennycason.fleschkincaid.lexer.word;
 
 /**
  * Created by kenny on 3/11/14.
@@ -7,7 +7,7 @@ public class Word {
 
     private final String text;
 
-    public Word(String text) {
+    public Word(final String text) {
         this.text = text;
     }
 

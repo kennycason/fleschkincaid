@@ -1,4 +1,4 @@
-package com.fleschkincaid.lexer.sentence;
+package com.kennycason.fleschkincaid.lexer.sentence;
 
 import java.util.List;
 

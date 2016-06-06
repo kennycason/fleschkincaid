@@ -1,6 +1,6 @@
-package com.fleschkincaid.lexer.syllable;
+package com.kennycason.fleschkincaid.lexer.syllable;
 
-import com.fleschkincaid.lexer.word.Word;
+import com.kennycason.fleschkincaid.lexer.word.Word;
 
 /**
  * Created by kenny on 3/11/14.
@@ -10,15 +10,15 @@ import com.fleschkincaid.lexer.word.Word;
  */
 public class SyllableLexer {
 
-    public int count(Word word) {
+    public int count(final Word word) {
         final String wordText = word.getText();
         int count = 0;
         boolean vowel = false;
 
-        if(wordText.isEmpty()) { return 0; }
+        if (wordText.isEmpty()) { return 0; }
 
         // check each word for vowels (don't count more than one vowel in a row)
-        for(int i = 0; i < wordText.length(); i++) {
+        for (int i = 0; i < wordText.length(); i++) {
             if (isVowel(wordText.charAt(i)) && !vowel) {
                 vowel = true;
                 count++;
@@ -30,14 +30,14 @@ public class SyllableLexer {
         }
 
         // check for 'e' at the end, as long as not a word w/ one syllable
-        char lastChar = wordText.charAt(wordText.length() - 1);
+        final char lastChar = wordText.charAt(wordText.length() - 1);
         if ((lastChar == 'e' || lastChar == 'E') && count != 1) {
             count--;
         }
         return count;
     }
 
-    public boolean isVowel(char c) {
+    public boolean isVowel(final char c) {
         return c == 'a' || c == 'A'
             || c == 'e' || c == 'E'
             || c == 'i' || c == 'I'

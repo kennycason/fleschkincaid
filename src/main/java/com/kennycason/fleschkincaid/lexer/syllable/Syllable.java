@@ -1,13 +1,13 @@
-package com.fleschkincaid.lexer.sentence;
+package com.kennycason.fleschkincaid.lexer.syllable;
 
 /**
  * Created by kenny on 3/11/14.
  */
-public class Sentence {
+public class Syllable {
 
-    public final String text;
+    private final String text;
 
-    public Sentence(String text) {
+    public Syllable(final String text) {
         this.text = text;
     }
 
@@ -17,9 +17,10 @@ public class Sentence {
 
     @Override
     public String toString() {
-        return "Sentence{" +
+        return "Syllable{" +
                 "text='" + text + '\'' +
                 '}';
     }
 
 }
+

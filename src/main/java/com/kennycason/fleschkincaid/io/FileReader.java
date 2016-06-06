@@ -1,4 +1,4 @@
-package com.fleschkincaid.io;
+package com.kennycason.fleschkincaid.io;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package com.fleschkincaid.lexer.sentence;
+package com.kennycason.fleschkincaid.lexer.sentence;
 
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.process.DocumentPreprocessor;
@@ -15,11 +15,11 @@ import java.util.List;
 public class StandfordNLPSentenceLexer implements SentenceLexer {
 
     @Override
-    public List<Sentence> tokenize(String text) {
-        List<Sentence> sentences = new ArrayList<>();
+    public List<Sentence> tokenize(final String text) {
+        final List<Sentence> sentences = new ArrayList<>();
         final DocumentPreprocessor dp = new DocumentPreprocessor(new StringReader(text));
 
-        for (List<HasWord> sentence : dp) {
+        for (final List<HasWord> sentence : dp) {
             sentences.add(new Sentence(sentence.toString()));
         }
         return sentences;
